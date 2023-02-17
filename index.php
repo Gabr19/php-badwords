@@ -1,6 +1,14 @@
 <?php
-    $text ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt itaque harum architecto tempore dolorum veniam unde, numquam voluptas saepe?";
-    
+    $text ="Applausi per Fibra, Fibra, Fibra, Fibra, Fibra
+    Applausi, applausi
+    Applausi per Fibra, Fibra, Fibra, Fibra, Fibra
+    Applausi, applausi
+    Applausi per Fibra, Fibra, Fibra, Fibra, Fibra
+    Applausi, applausi
+    Applausi per Fibra, Fibra, Fibra, Fibra, Fibra
+    Applausi, applausi, applausi per";
+    $changeWord = $_GET['word'];
+    $paragrafoModificato = str_replace($changeWord, '***' , $text);
 ?>
 
 
@@ -15,6 +23,20 @@
 <body>
     <h1> <?php echo $text?></h1>
     <p><?php echo strlen($text)?></p>
+
+    <p>la parola da sostituire è: <?php echo $changeWord;?></p>
+    <h1><?php echo $paragrafoModificato;?></h1>
+    <p><?php echo strlen($paragrafoModificato)?></p>
+
+
+
+
+    <form>
+        <input type="text" name="word" placeholder="parola da sostituire">
+        <button>
+            invio
+        </button>
+    </form>
     
 </body>
 </html>
